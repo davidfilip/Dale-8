@@ -16,6 +16,11 @@ func init() {
 func main() {
 	initGraphics()
 	loadRom("ibm")
+
+	initCPU()
+	for {
+		emulateCycle()
+	}
 }
 
 func loadRom(romName string) []byte {
