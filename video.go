@@ -11,7 +11,7 @@ func initGraphics() {
 	}
 	defer glfw.Terminate()
 
-	window, err := glfw.CreateWindow(640, 480, "Chip8 Emulator", nil, nil)
+	window, err := glfw.CreateWindow(screenWidth*pixelSize, screenHeight*pixelSize, "Dale: Chip-8 Emulator", nil, nil)
 	if err != nil {
 		panic(err)
 	}

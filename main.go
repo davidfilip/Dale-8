@@ -16,12 +16,11 @@ func init() {
 func main() {
 	initGraphics()
 	loadRom("ibm")
-
 }
 
 func loadRom(romName string) []byte {
-	rompath := []string{"./games/", romName}
-	rom, err := ioutil.ReadFile(strings.Join(rompath,""))
+	romPath := []string{"./games/", romName}
+	rom, err := ioutil.ReadFile(strings.Join(romPath, ""))
 	if err != nil {
 		log.Fatal(err)
 	}
